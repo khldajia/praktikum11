@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTIKUM 11</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 10px 450px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "green";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function image() {
+            const list_image = ["date1.jpg", "date 2.jpg", "date3.jpg", "date4.jpg", "date5.jpg", "date6.jpeg"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "d1") {
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+            }
+            
+
+            if(pilihan.value == "d2") {
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan.value == "d3") {
+                let select = list_image[2];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan.value == "d4") {
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan.value == "d5") {
+                let select = list_image[4];
+                document.getElementById("image").src = `image/${select}`
+            }
+
+            if(pilihan.value == "d6") {
+                let select = list_image[5];
+                document.getElementById("image").src = `image/${select}`
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to khldjia's Image Nature </h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="image()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="d1">date1</option>
+        <option value="d2">date2</option>
+        <option value="d3">date3</option>
+        <option value="d4">date4</option>
+        <option value="d5">date5</option>
+        <option value="d6">date6</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
